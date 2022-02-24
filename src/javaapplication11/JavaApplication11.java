@@ -5,6 +5,8 @@
  */
 package javaapplication11;
 
+import java.util.Scanner;
+
 /**
  *
  * @author r2kar
@@ -46,10 +48,30 @@ public class JavaApplication11 {
                 break;
      }
     }
+    
+    public static Boolean isSeason(String myStr){
+        Boolean isSeason=false;
+        
+        for (Seasons s : Seasons.values()) {
+            if (s.name().equals(myStr)) {
+                isSeason=true;
+            }
+        }
+
+        return isSeason;
+    }
+    
     public static void main(String[] args) {
         // TODO code application logic here
         // try to get the input (myStr) from the user
-        String myStr= "SUMMER";
+        Scanner input=new Scanner(System.in);
+        String myStr= input.next();
+        
+        if(isSeason(myStr))
+            System.out.println("This is a season");
+        else
+            System.out.println("This is NOT a season");
+        
         JavaApplication11 test1= new JavaApplication11(Seasons.valueOf(myStr));
         test1.seasonDescription();
         //test1.isSeason();
