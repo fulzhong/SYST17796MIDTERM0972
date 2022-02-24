@@ -49,6 +49,7 @@ public class JavaApplication11 {
      }
     }
     
+    //Add isSeason Method
     public static Boolean isSeason(String myStr){
         Boolean isSeason=false;
         
@@ -67,6 +68,7 @@ public class JavaApplication11 {
         Scanner input=new Scanner(System.in);
         String myStr= input.next();
         
+        //Check if user entered season
         if(isSeason(myStr))
             System.out.println("This is a season");
         else
